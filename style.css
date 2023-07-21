@@ -1,5 +1,57 @@
-body{
+/* Reset */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
   margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+html {
+  font-family: 'Lato', sans-serif;
 }
 .main-container {
   display: grid;
@@ -18,8 +70,87 @@ body{
 .header {
   box-shadow: 0 3px 5px rgba(103, 103, 103, 0.495);
   z-index: 1;
+  padding: 1rem 3rem;
 }
 
+.header > div{
+
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 7rem;
+}
+
+.searchbar{
+  flex: 1;
+  display: flex;
+  gap: 1rem;
+}
+
+.searchbar__input {
+  flex: 1;
+  border-radius: 3rem;
+  border: none;
+  background-color: #e1e8ef;
+  height: auto;
+  padding-left: 1rem;
+
+}
+.notification-center{
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.avatar{
+  --avatar-size: 3rem;
+  border-radius: 50%;
+  background-color: yellow;
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+}
+
+.action-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.greetings{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+}
+.greetings__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.button{
+  border: none;
+  background: blue;
+  color: white;
+  border-radius: 2rem;
+  width: 5rem;
+  margin-right: 1rem;
+}
+
+.sidebar{
+  padding: 2rem;
+}
+
+.sidebar__group {
+  margin-top: 3rem;
+}
+
+.sidebar__item{
+  gap: 1rem;
+  display: flex;
+}
 main {
   overflow-y: auto;
   display: grid;
