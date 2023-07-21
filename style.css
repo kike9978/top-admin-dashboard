@@ -49,6 +49,14 @@ main {
   gap: 1rem;
   height: 100%;
 }
+
+.projects__container .card p{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+          line-clamp: 3; 
+  -webkit-box-orient: vertical;
+}
 .card {
   box-shadow: 0 3px 5px rgba(103, 103, 103, 0.495);
   background-color: white;
@@ -69,6 +77,11 @@ main {
 .main-sidebar .card p{
   text-overflow: ellipsis;
   line-clamp: 3;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+          line-clamp: 3; 
+  -webkit-box-orient: vertical;
 }
 .main-sidebar .card > *:not(.divider){
   flex: 1;
